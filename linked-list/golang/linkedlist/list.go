@@ -5,12 +5,12 @@ import (
 	"sync"
 )
 
-//
+//Element value
 type Item string
 
 // Element is an element of a linked list.
 type Node struct {
-	//
+	// The value stored with this element.
 	content Item
 	// Next pointers in the linked list of elements.
 	// To simplify the implementation, internally a list l is implemented
@@ -18,9 +18,6 @@ type Node struct {
 	next *Node
 	// The list to which this element belongs.
 	node *Node
-
-	// The value stored with this element.
-	Value interface{}
 }
 
 // ItemLinkedList the linked list of Items
