@@ -29,6 +29,12 @@ func TestAppend(t *testing.T) {
 	}
 }
 
+func BenchmarkItemLinkedList_Append(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		ll.Append("first")
+	}
+}
+
 func TestRemoveAt(t *testing.T) {
 	_, err := ll.RemoveAt(1)
 	if err != nil {
